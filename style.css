@@ -1,0 +1,133 @@
+:root {
+  --paper: #f3e632;
+  --ink: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #e7e7e7;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(280px, 520px) minmax(260px, 360px);
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+.poster {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 18px 18px 0 #121212;
+}
+
+.poster-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px;
+  transform-origin: center;
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+.eyebrow,
+.footer-text {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+}
+
+h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+  word-break: break-word;
+}
+
+.controls {
+  padding: 28px;
+  background: white;
+  border: 3px solid var(--ink);
+}
+
+.controls h2 {
+  margin: 0 0 24px;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+input[type="range"],
+input[type="text"],
+input[type="color"] {
+  width: 100%;
+  margin-top: 8px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid var(--ink);
+  font: inherit;
+}
+
+input[type="color"] {
+  height: 42px;
+  padding: 2px;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 12px;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .app {
+    grid-template-columns: 1fr;
+    padding: 30px 18px;
+  }
+
+  .poster {
+    justify-self: center;
+  }
+}

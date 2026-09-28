@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poster Controls</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="poster" id="poster" aria-label="Interactive poster preview">
+      <div class="poster-content" id="posterContent">
+        <p class="eyebrow">DESIGN / 2026</p>
+        <h1 id="posterTitle">MAKE<br />SOMETHING<br />LOUD.</h1>
+        <p class="footer-text">EXPERIMENTAL POSTER SERIES<br />ATHENS, GEORGIA</p>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Poster controls">
+      <h2>Poster controls</h2>
+
+      <label for="skew">Skew <output id="skewValue">0°</output></label>
+      <input id="skew" type="range" min="-25" max="25" value="0" />
+
+      <label for="rotate">Rotate <output id="rotateValue">0°</output></label>
+      <input id="rotate" type="range" min="-15" max="15" value="0" />
+
+      <label for="size">Type size <output id="sizeValue">64px</output></label>
+      <input id="size" type="range" min="36" max="100" value="64" />
+
+      <label for="color">Background</label>
+      <input id="color" type="color" value="#f3e632" />
+
+      <label for="titleInput">Headline</label>
+      <input id="titleInput" type="text" value="MAKE SOMETHING LOUD." maxlength="40" />
+
+      <button id="resetButton" type="button">Reset poster</button>
+    </section>
+  </main>
+
+  <script src="poster.js"></script>
+</body>
+</html>
